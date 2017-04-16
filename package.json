@@ -12,5 +12,9 @@
   "dependencies": {
     "express": "^4.15.2",
     "http-proxy": "^1.16.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kujiraOo/express-proxy"
   }
 }
