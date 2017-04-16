@@ -1,0 +1,8 @@
+{
+  "port": 8383,
+  "ssl": false,
+  "endpoint": "localhost",
+  "endpointPort": 8080,
+  "endpointSSL": false,
+  "secureSSL": false
+}
