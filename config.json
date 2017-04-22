@@ -1,8 +1,7 @@
 {
   "port": 8383,
   "ssl": false,
-  "endpoint": "localhost",
-  "endpointPort": 8080,
+  "endpoint": "localhost:5000",
   "endpointSSL": false,
   "secureSSL": false,
   "respondWith": "/public/index.html"

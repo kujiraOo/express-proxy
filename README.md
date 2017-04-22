@@ -7,31 +7,71 @@ Express.js server that can host static files and proxy API requests, with web so
 
 To configure the server modify `config.json`
 
-```
-{
-    // port at which server will listen
-    "port": 80, 
-    
-    // if set to true, an HTTPS server will be created
-    "ssl": false, 
-    
-    // endpoint to proxy all the requests to
-    "endpoint": "localhost", 
-    
-    // endpoint's port
-    "endpointPort": 8080, 
-    
-     // if set to true, a secure connection will be established to the endpoint
-    "endpointSSL": false,
-    
-    // if set to false, the certificates from the endpoint won't be verifyed
-    "secureSSL": true 
-    
-    // if path string is specified, the server will response to all unknown 
-    // requests with the specified file
-    "respondWith": false | "/path/to/file/to/respond/with"  
-}
-```
+
+###### Port
+
+Port at which server will listen
+
+In config.json: `"port": 80`
+
+Env: `PORT=80`
+
+Cli: `-p 80`
+
+
+###### SSL
+
+If set to true, an HTTPS server will be created
+
+In config.json: `"ssl": true`
+
+Env: `SSL=true`
+
+Cli: `--ssl`
+
+
+##### Endpoint
+
+Endpoint to proxy all the requests to
+
+In config.json: `"endpoint": "localhost:8080"`
+
+Env: `SSL=localhost:8080`
+
+Cli: `-e localhost:8080`
+
+
+##### Endpoint SSL
+
+If set to true, a secure connection will be established to the endpoint
+
+In config.json: `"endpointSSL": false`
+
+Env: `ENDPOINT_SSL=localhost:8080`
+
+Cli: `--no-endpoint-ssl`
+
+##### Secure SSL
+
+if set to false, the certificates from the endpoint won't be verified
+
+In config.json: `"secureSSL": true`
+
+Env: `SECURE_SSL=true`
+
+Cli: `--secure-ssl`
+
+
+##### Respond with
+
+if path string is specified, the server will response to all unknown requests with the specified file
+
+In config.json: `"respondWith": false | "/path/to/file/to/respond/with"`
+
+Env: `RESPOND_WITH=false | /path/to/file/to/respond/with`
+
+Cli: `-r /path/to/file/to/respond/with` or `--no-r`
+
 
 ##### Web Server
 Drop your static web app files into the public folder
@@ -42,6 +82,11 @@ This behaviour will be configurable in the next release.
 If you're trying to create an HTTPS server, name your SSL key `cert.key` and your SSL certificate `cert.pem` and drop them in the root of the project. 
 
 ##### Changelog
+
+###### V0.1.2
+
+- Added support for env variables and cli arguments
+- Changed the way the endpoint is being configured
 
 ###### V0.1.1
 
