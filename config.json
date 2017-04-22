@@ -4,5 +4,6 @@
   "endpoint": "localhost",
   "endpointPort": 8080,
   "endpointSSL": false,
-  "secureSSL": false
+  "secureSSL": false,
+  "respondWith": "/public/index.html"
 }

@@ -9,12 +9,27 @@ To configure the server modify `config.json`
 
 ```
 {
-    "port": 80, // port at which server will listen
-    "ssl": false, // if set to true, an HTTPS server will be created
-    "endpoint": "localhost", // endpoint to proxy all the requests to
-    "endpointPort": 80, // endpoint's port
-    "endpointSSL": false, // if set to true, a secure connection will be established to the endpoint
-    "secureSSL": true // if set to false, the certificates from the endpoint won't be verifyed
+    // port at which server will listen
+    "port": 80, 
+    
+    // if set to true, an HTTPS server will be created
+    "ssl": false, 
+    
+    // endpoint to proxy all the requests to
+    "endpoint": "localhost", 
+    
+    // endpoint's port
+    "endpointPort": 8080, 
+    
+     // if set to true, a secure connection will be established to the endpoint
+    "endpointSSL": false,
+    
+    // if set to false, the certificates from the endpoint won't be verifyed
+    "secureSSL": true 
+    
+    // if path string is specified, the server will response to all unknown 
+    // requests with the specified file
+    "respondWith": false | "/path/to/file/to/respond/with"  
 }
 ```
 
@@ -31,5 +46,3 @@ If you're trying to create an HTTPS server, name your SSL key `cert.key` and you
 - Test web socket proxy 
 - Make `/api` prefix of the endpoint configurable
 - Add support for other front-end web socket clients except socket.io
-- Make option 'respond to any request with a specific file' optional
-- Make path to the 'respond to any request with a specific file' file configurable
