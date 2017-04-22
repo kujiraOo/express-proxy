@@ -41,6 +41,12 @@ This behaviour will be configurable in the next release.
 
 If you're trying to create an HTTPS server, name your SSL key `cert.key` and your SSL certificate `cert.pem` and drop them in the root of the project. 
 
+##### Changelog
+
+###### V0.1.1
+
+- Made "response with a specific file" feature configurable
+
 ##### TODO
 
 - Test web socket proxy 

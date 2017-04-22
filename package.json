@@ -1,6 +1,6 @@
 {
   "name": "express-proxy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Express.js server that can host static files and proxy API requests, with web sockets and SSL support",
   "main": "server.js",
   "scripts": {
